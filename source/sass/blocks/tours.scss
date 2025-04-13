@@ -1,0 +1,179 @@
+.tours {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    right: 0;
+    top: 10px;
+    display: block;
+    width: 141px;
+    height: 595px;
+
+    background-image: url("../../img/decoration/clouds-1-s.png");
+    background-size: 141px 595px;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @supports (background-image: url("../../img/decoration/clouds-1-s.webp")) {
+      background-image: url("../../img/decoration/clouds-1-s.webp");
+    }
+
+    @media (resolution >=2dppx) {
+      background-image: url("../../img/decoration/clouds-1-2x-s.png");
+
+      @supports (background-image: url("../../img/decoration/clouds-1-2x-s.webp")) {
+        background-image: url("../../img/decoration/clouds-1-2x-s.webp");
+      }
+    }
+
+    @media (min-width: $tablet-width) {
+      top: -92px;
+      width: 425px;
+      height: 1630px;
+
+      background-image: url("../../img/decoration/clouds-1-m.png");
+      background-size: 425px 1630px;
+
+      @supports (background-image: url("../../img/decoration/clouds-1-m.webp")) {
+        background-image: url("../../img/decoration/clouds-1-m.webp");
+      }
+
+      @media (resolution >=2dppx) {
+        background-image: url("../../img/decoration/clouds-1-2x-m.png");
+
+        @supports (background-image: url("../../img/decoration/clouds-1-2x-m.webp")) {
+          background-image: url("../../img/decoration/clouds-1-2x-m.webp");
+        }
+      }
+    }
+
+    @media (min-width: $desktop-width) {
+      top: -126px;
+      width: 602px;
+
+      background-image: url("../../img/decoration/clouds-1-l.png");
+      background-size: 602px 1630px;
+
+      @supports (background-image: url("../../img/decoration/clouds-1-l.webp")) {
+        background-image: url("../../img/decoration/clouds-1-l.webp");
+      }
+
+      @media (resolution >=2dppx) {
+        background-image: url("../../img/decoration/clouds-1-2x-l.png");
+
+        @supports (background-image: url("../../img/decoration/clouds-1-2x-l.webp")) {
+          background-image: url("../../img/decoration/clouds-1-2x-l.webp");
+        }
+      }
+    }
+  }
+}
+
+.tours__container {
+  padding-top: 39px;
+  padding-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 60px;
+    padding-bottom: 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 123px;
+    padding-bottom: 100px;
+  }
+}
+
+.tours__title {
+  margin-bottom: 39px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: -35px;
+  }
+}
+
+.tours__swiper {
+  margin-bottom: 25px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 70px;
+    margin-bottom: 27px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 85px;
+    margin-bottom: 54px;
+  }
+}
+
+.tours__swiper-button {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    position: absolute;
+    top: 32px;
+    right: 0;
+
+    &--prev {
+      left: unset;
+      right: 41px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    top: 19px;
+    right: 0;
+
+    &--prev {
+      right: 41px;
+    }
+  }
+}
+
+.tours__link {
+  @include primary-font (14px, 1); // $font-size, $line-height
+  font-weight: 700;
+  display: block;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  &:hover {
+    color: var(--border-accent, #ff6347);;
+    outline: none;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus-visible {
+    color: var(--bg-primary, #ff6347);;
+    outline: none;
+  }
+
+  &:active {
+    color: var(--bg-secondary, #ff6347);;
+    outline: none;
+  }
+
+  &:disabled,
+  &--disabled {
+    color: var(--bg-middle, #ff6347);;
+    outline: none;
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 16px;
+  }
+}

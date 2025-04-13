@@ -1,0 +1,36 @@
+.burger {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 26px;
+  height: 26px;
+  padding: 0;
+  border: none;
+  color: var(--bg-ligth, #ff6347);
+  background-color: transparent;
+  cursor: pointer;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 5px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
+}
+
+.burger__open-icon {
+  display: block;
+
+  &--menu-open {
+    display: none;
+  }
+}
+
+.burger__close-icon {
+  display: none;
+
+  &--menu-open {
+    display: block;
+  }
+}

@@ -1,0 +1,22 @@
+/* здесь используйте глобальные селекторы img, body, html и так далее */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  @include primary-font (12px, 18px); // $font-size, $line-height
+
+  margin: 0;
+}

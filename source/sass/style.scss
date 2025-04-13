@@ -1,4 +1,22 @@
-// Vendor
-// ---------------------------------
+/* GLOBAL */
+@import "./common/root";
+@import "./common/variables";
+@import "./common/mixins";
+@import "./common/global";
+@import "./common/fonts";
+@import "./common/visually-hidden";
 
+// Blocks
+@import "./blocks/main-nav";
+@import "./blocks/header";
+@import "./blocks/container";
+@import "./blocks/hero";
+@import "./blocks/promo-slide";
+@import "./blocks/overlay";
+@import "./blocks/burger";
+@import "./blocks/tours";
+@import "./blocks/tour-slide";
+@import "./blocks/training";
+
+// Vendor
 @import "vendor/normalize";

@@ -1,0 +1,117 @@
+.main-nav {
+  @include primary-font (14px, 1); // $font-size, $line-height
+  font-weight: 700;
+  position: static;
+  display: none;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+
+  &--is-open {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    display: block;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: var(--bg-middle, #ff6347);
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 16px;
+
+    &--is-open {
+      padding-left: 45px;
+      padding-right: 45px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    display: block;
+    font-weight: 400;
+    text-transform: unset;
+    letter-spacing: normal;
+  }
+}
+
+.main-nav__list {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  padding: 0;
+  margin-top: 30px;
+  margin-bottom: 45px;
+  list-style: none;
+
+  @media (min-width: $tablet-width) {
+    gap: 26px;
+    margin-top: 50px;
+    margin-bottom: 70px;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0;
+    gap: 21px;
+  }
+}
+
+.main-nav__item {
+  @media (min-width: $desktop-width) {
+    position: relative;
+
+    &:has(.main-nav__link:hover) {
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -3px;
+        left: 0;
+        right: 0;
+        display: block;
+        height: 1px;
+        width: 100%;
+        background-color: var(--bg-ligth, #ff6347);
+      }
+    }
+  }
+}
+
+.main-nav__link {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  &:hover {
+    color: var(--bg-ligth, #ff6347);
+    outline: none;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus-visible {
+    color: var(--bg-ligth, #ff6347);
+    outline: 1px solid var(--bg-ligth, #ff6347);;
+    outline-offset: 3px 5px;
+  }
+
+  &:active {
+    color: var(--bg-secondary, #ff6347);
+    outline: none;
+  }
+
+  &:disabled,
+  &--disabled {
+    color: var(--bg-middle, #ff6347);
+    outline: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0 5px;
+  }
+}
