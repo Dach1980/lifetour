@@ -1,0 +1,43 @@
+.primary-button {
+  @include primary-font (16px, 1); // $font-size, $line-height
+  font-weight: 500;
+  display: block;
+  width: fit-content;
+  padding: 20px;
+  color: var(--bg-ligth, #ff6347);
+  text-align: center;
+  background-color: var(--bg-primary, #ff6347);
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+
+  &:hover {
+    background-color: var(--bg-ligth, #ff6347);
+    color: var(--bg-secondary, #ff6347);
+    outline: 1px solid var(--bg-secondary, #ff6347);
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus-visible {
+    background-color: var(--bg-ligth, #ff6347);
+    color: var(--bg-secondary, #ff6347);
+    outline: none;
+  }
+
+  &:active {
+    background-color: var(--bg-secondary, #ff6347);
+    color: var(--bg-ligth, #ff6347);
+    outline: none;
+  }
+
+  &:disabled,
+  &--disabled {
+    background-color: var(--bg-middle, #ff6347);
+    color: var(--bg-ligth, #ff6347);
+    outline: none;
+  }
+}

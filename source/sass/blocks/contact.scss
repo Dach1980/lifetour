@@ -1,0 +1,126 @@
+.contact {
+  position: relative;
+  padding-left: 32px;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    display: block;
+    width: 22px;
+    height: 22px;
+    background-size: 22px 22px;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  &--phone::before {
+    background-image: url("/__spritemap#sprite-phone-view");
+  }
+
+  &--mail::before {
+    background-size: 22px 16px;
+    background-image: url("/__spritemap#sprite-mail-view");
+  }
+
+  &--address::before {
+    background-image: url("/__spritemap#sprite-pin-view");
+  }
+
+  @media (min-width: $tablet-width) {
+    padding-left: 34px;
+
+    &::before {
+      width: 24px;
+      height: 24px;
+      background-size: 24px 24px;
+    }
+
+    &--mail::before {
+      background-size: 22px 15px;
+    }
+
+    &--address br {
+      display: none;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 56px;
+
+    &::before {
+      top: 50%;
+      transform: translate(0, -50%);
+      width: 26px;
+      height: 26px;
+      background-size: 26px 26px;
+    }
+
+    &--mail::before {
+      background-size: 24px 17px;
+    }
+  }
+}
+
+.contact__name {
+  @include primary-font (14px, 1); // $font-size, $line-height
+  font-weight: 600;
+  margin-bottom: 8px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 6px;
+
+    font-size: 16px;
+    line-height: 16px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 18px;
+    line-height: 18px;
+  }
+}
+
+.contact__value {
+  margin: 0;
+
+  @media (min-width: $tablet-width) {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+.contact__link {
+  text-decoration: none;
+  color: inherit;
+
+  &:hover {
+    color: var(--border-accent, #ff6347);
+    outline: none;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus-visible {
+    color: var(--bg-primary, #ff6347);
+    outline: none;
+  }
+
+  &:active {
+    color: var(--bg-secondary, #ff6347);
+    outline: none;
+  }
+
+  &:disabled,
+  &--disabled {
+    color: var(--bg-middle, #ff6347);
+    outline: none;
+  }
+}

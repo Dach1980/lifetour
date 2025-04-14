@@ -1,0 +1,35 @@
+.primary-title {
+  @include primary-font (22px, 1); // $font-size, $line-height
+  font-weight: 800;
+  position: relative;
+  margin: 0;
+
+  &::before {
+    @include primary-font (26px, 1); // $font-size, $line-height
+  font-weight: 800;
+    content: attr(data-text);
+    position: absolute;
+    left: 0;
+    bottom: 12px;
+    color: var(--bg-dark, #ff6347);
+    opacity: 0.03;
+  }
+
+  @media (min-width: $tablet-width) {
+    @include primary-font (25px, 1); // $font-size, $line-height
+
+    &::before {
+      @include primary-font (40px, 1); // $font-size, $line-height
+      bottom: 2px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    @include primary-font (35px, 1); // $font-size, $line-height
+
+    &::before {
+      @include primary-font (55px, 1); // $font-size, $line-height
+      bottom: 0;
+    }
+  }
+}

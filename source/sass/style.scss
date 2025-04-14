@@ -8,6 +8,7 @@
 
 // Blocks
 @import "./blocks/main-nav";
+@import "./blocks/page-main";
 @import "./blocks/header";
 @import "./blocks/container";
 @import "./blocks/hero";
@@ -23,6 +24,15 @@
 @import "./blocks/adv";
 @import "./blocks/adv-slide";
 @import "./blocks/gallery";
+@import "./blocks/form";
+@import "./blocks/form-field";
+@import "./blocks/contacts";
+@import "./blocks/contact";
+@import "./blocks/main-footer";
+@import "./blocks/socials";
+@import "./blocks/primary-title";
+@import "./blocks/primary-button";
+@import "./blocks/trainer-card";
 
 // Vendor
 @import "vendor/normalize";

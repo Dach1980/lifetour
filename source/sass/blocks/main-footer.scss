@@ -1,0 +1,207 @@
+.main-footer {
+  line-height: 14px;
+  border-top: 1px solid var(--border-lighter, #ff6347);
+
+  @media (min-width: $tablet-width) {
+    font-size: 14px;
+    line-height: 14px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 16px;
+    line-height: 16px;
+  }
+}
+
+.main-footer__container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: center;
+  padding-top: 23px;
+  padding-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 142px 1fr;
+    gap: 33px 0;
+    justify-items: center;
+    padding-top: 34px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 200px 1fr 200px;
+    gap: 20px 0;
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+}
+
+.main-footer__logo {
+  @media (min-width: $desktop-width) {
+    padding: 9px 29px;
+  }
+}
+
+.main-footer__nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  gap: 13px 78px;
+  justify-items: center;
+  grid-auto-flow: column;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @media (min-width: $tablet-width) {
+    justify-self: end;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  @media (min-width: $desktop-width) {
+    gap: 20px;
+    justify-self: unset;
+  }
+}
+
+.main-footer__item {
+  @media (min-width: $desktop-width) {
+    position: relative;
+
+    &:has(.main-nav__link:hover) {
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -3px;
+        left: 0;
+        right: 0;
+        display: block;
+        height: 1px;
+        width: 100%;
+        background-color: var(--bg-ligth, #ff6347);
+      }
+    }
+  }
+}
+
+.main-footer__link {
+  text-decoration: none;
+  color: inherit;
+
+  &:hover {
+    color: var(--bg-dark, #ff6347);
+    outline: none;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus-visible {
+    color: var(--bg-dark, #ff6347);
+    outline: 1px solid var(--bg-dark, #ff6347);
+    outline-offset: 3px 5px;
+  }
+
+  &:active {
+    color: var(--bg-secondary, #ff6347);
+    outline: none;
+  }
+
+  &:disabled,
+  &--disabled {
+    color: var(--bg-middle, #ff6347);
+    outline: none;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 0 5px;
+  }
+}
+
+.main-footer__phone {
+  @include primary-font (18px, 1); // $font-size, $line-height
+  font-weight: 600;
+  display: none;
+  text-decoration: none;
+  color: inherit;
+
+  &:hover {
+    color: var(--border-accent, #ff6347);
+    outline: none;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus-visible {
+    color: var(--bg-primary, #ff6347);
+    outline: none;
+  }
+
+  &:active {
+    color: var(--bg-secondary, #ff6347);
+    outline: none;
+  }
+
+  &:disabled,
+  &--disabled {
+    color: var(--bg-middle, #ff6347);
+    outline: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: block;
+    justify-self: end;
+  }
+}
+
+.main-footer__social-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @media (min-width: $tablet-width) {
+    grid-column: 1/-1;
+  }
+}
+
+.main-footer__privacy {
+  @include primary-font (12px, 1); // $font-size, $line-height
+  font-weight: 300;
+  text-decoration: none;
+  color: inherit;
+
+  &:hover {
+    color: var(--border-accent, #ff6347);
+    outline: none;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus-visible {
+    color: var(--bg-primary, #ff6347);
+    outline: none;
+  }
+
+  &:active {
+    color: var(--bg-secondary, #ff6347);
+    outline: none;
+  }
+
+  &:disabled,
+  &--disabled {
+    color: var(--bg-middle, #ff6347);
+    outline: none;
+  }
+
+  @media (min-width: $tablet-width) {
+    grid-column: 1/-1;
+  }
+}

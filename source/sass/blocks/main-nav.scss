@@ -81,9 +81,8 @@
 }
 
 .main-nav__link {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+  text-decoration: none;
+  color: inherit;
 
   &:hover {
     color: var(--bg-ligth, #ff6347);
