@@ -1,0 +1,73 @@
+.review-slide {
+  display: grid;
+  gap: 20px;
+  width: 290px;
+  padding: 20px;
+  font-size: 12px;
+  line-height: 18px;
+  background-color: var(--bg-ligth, #ff6347);;
+
+  box-shadow: 0 0 20px rgba(28, 51, 116, 0.1);
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: 186px 299px;
+    gap: 30px;
+    width: 565px;
+    align-items: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 258px 352px;
+    width: 700px;
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+
+.review-slide__content {
+  display: flex;
+  flex-direction: column;
+}
+
+.review-slide__content blockquote {
+  margin: 0;
+  margin-bottom: 15px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: -1px;
+    margin-bottom: 26px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: -12px;
+    margin-bottom: 2px;
+  }
+}
+
+.review-slide__content blockquote p {
+  margin: 0;
+
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
+
+.review-slide__author {
+  @include primary-font (12px, 1); // $font-size, $line-height
+  font-weight: 700;
+  margin: 0;
+  margin-bottom: 8px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 6px;
+
+    font-size: 13px;
+    line-height: 13px;
+  }
+}
+
+.review-slide__about-author {
+  @include primary-font (12px, 1); // $font-size, $line-height
+  font-weight: 300;
+  margin: 0;
+}
