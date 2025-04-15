@@ -1,4 +1,20 @@
-// https://swiperjs.com/get-started#installation
-// import Swiper from "swiper";
-// import {Navigation, Pagination} from "swiper/modules";
-// import 'swiper/css';
+import { promoSlider } from './modules/hero-slider';
+import { toursSlider } from './modules/tours-slider';
+import { renderStars } from './modules/render-tour-stars';
+import { trainersSlider } from './modules/trainers-slider';
+import { reviewsSlider } from './modules/reviews-slider';
+import { renderShadowTitle } from './modules/add-shadow-titles';
+import { advsSlider } from './modules/advs-slider';
+import { gallerySlider } from './modules/gallery-slider';
+import { toggledMenu } from './modules/burger-menu';
+import './modules/form-validate';
+
+toggledMenu();
+promoSlider();
+toursSlider();
+renderStars();
+trainersSlider();
+reviewsSlider();
+advsSlider();
+gallerySlider();
+renderShadowTitle();
