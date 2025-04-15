@@ -5,9 +5,6 @@
   margin: 0 auto;
   padding: 0;
   grid-template-rows: auto 1fr auto;
-
-  color: $base-dark;
-  font-family: $primary-font;
-
-  background-color: $base-light;
+  color: var(--bg-dark, #ff6347);
+  background-color: var(--bg-ligth, #ff6347);
 }

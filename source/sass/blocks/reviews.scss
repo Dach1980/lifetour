@@ -52,6 +52,8 @@
   @media (min-width: $tablet-width) {
     display: flex;
     position: absolute;
+    align-items: center;
+    justify-content: center;
     top: 32px;
     right: 0;
 

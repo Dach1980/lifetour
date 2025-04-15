@@ -113,6 +113,8 @@
 
   @media (min-width: $tablet-width) {
     display: flex;
+    align-items: center;
+    justify-content: center;
     position: absolute;
     top: 32px;
     right: 0;
@@ -143,9 +145,8 @@
   padding: 10px;
   text-transform: uppercase;
   letter-spacing: 1px;
-  margin: 0;
-  padding: 0;
-  list-style: none;
+  text-decoration: none;
+  color: inherit;
 
   &:hover {
     color: var(--border-accent, #ff6347);;

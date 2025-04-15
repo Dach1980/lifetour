@@ -1,0 +1,47 @@
+.primary-slider-button {
+  width: 37px;
+  height: 35px;
+  color: var(--bg-ligth, #ff6347);
+  background-color: var(--bg-primary, #ff6347);
+
+  &--next {
+    transform: rotate(180deg);
+  }
+
+  &:hover {
+    background-color: var(--bg-ligth, #ff6347);
+    color: var(--bg-secondary, #ff6347);
+    outline: 1px solid var(--bg-secondary, #ff6347);
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus-visible {
+    background-color: var(--bg-ligth, #ff6347);
+    color: var(--bg-secondary, #ff6347);
+    outline: none;
+  }
+
+  &:active {
+    background-color: var(--bg-secondary, #ff6347);
+    color: var(--bg-ligth, #ff6347);
+    outline: none;
+  }
+
+  &:disabled,
+  &--disabled {
+    background-color: var(--bg-middle, #ff6347);
+    color: var(--bg-ligth, #ff6347);
+    outline: none;
+  }
+
+  &::after {
+    content: unset;
+  }
+}
+
+.primary-slider-button svg {
+  width: 14px;
+}
