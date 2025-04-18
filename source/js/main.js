@@ -4,7 +4,7 @@ import { renderStars } from './modules/render-tour-stars';
 import { trainersSlider } from './modules/trainers-slider';
 import { reviewsSlider } from './modules/reviews-slider';
 import { renderShadowTitle } from './modules/add-shadow-titles';
-import { advsSlider } from './modules/advs-slider';
+import { advsSlider } from './modules/advantages-slider';
 import { gallerySlider } from './modules/gallery-slider';
 import { toggledMenu } from './modules/burger-menu';
 import './modules/form-validate';
