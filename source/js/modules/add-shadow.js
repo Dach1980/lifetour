@@ -1,15 +1,15 @@
-const titleElsCollection = document.querySelectorAll('.primary-title');
-const unclassSectionEl = document.querySelector('.about');
-const unclassTitleEl = unclassSectionEl.querySelector('h2');
+const titledElements = document.querySelectorAll('.primary-title');
+const sectionAbout = document.querySelector('.about h2');
 
-const addDataText = (titleEl) => {
-  titleEl.dataset.text = titleEl.textContent;
+const setDataTextAttribute = (element) => {
+  if (element) {
+    element.dataset.text = element.textContent;
+  }
 };
 
-const renderShadowTitle = () => {
-  titleElsCollection.forEach((title) => addDataText(title));
-  addDataText(unclassTitleEl);
+const shadowTitle = () => {
+  titledElements.forEach(setDataTextAttribute);
+  setDataTextAttribute(sectionAbout);
 };
 
-export { renderShadowTitle };
-
+export { shadowTitle };
