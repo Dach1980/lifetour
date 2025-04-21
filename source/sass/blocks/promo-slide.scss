@@ -116,7 +116,7 @@
 
   @media (min-width: $desktop-width) {
     max-width: 945px;
-    margin-bottom: 25px;
+    margin-bottom: 23px;
     font-size: 77px;
     line-height: 77px;
   }
@@ -139,6 +139,7 @@
 
   @media (min-width: $desktop-width) {
     max-width: 464px;
+    margin-bottom: 36px;
   }
 }
 
@@ -167,7 +168,7 @@
   @media (min-width: $desktop-width) {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 8px;
     margin-top: auto;
   }
 }
