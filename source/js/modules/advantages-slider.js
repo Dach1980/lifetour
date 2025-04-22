@@ -26,7 +26,7 @@ function advsSlider() {
         centeredSlides: false,
         initialSlide: 1,
         slidesPerGroup: 2,
-        // slidesPerGroupSkip: 1,
+        slidesPerGroupSkip: 1,
         loopAddBlankSlides: false,
         allowTouchMove: false,
       },
