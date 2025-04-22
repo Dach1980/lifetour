@@ -103,7 +103,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 85px;
+    padding-top: 83px;
     margin-bottom: 54px;
   }
 }
@@ -126,7 +126,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    top: 19px;
+    top: 0;
     right: 0;
 
     &--prev {
@@ -176,5 +176,10 @@
   @media (min-width: $tablet-width) {
     font-size: 16px;
     line-height: 16px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 482px;
+    letter-spacing: 0.6px;
   }
 }

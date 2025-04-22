@@ -16,7 +16,12 @@ img {
 }
 
 body {
-  @include primary-font (12px, 18px); // $font-size, $line-height
+  @include primary-font (14px, 20px); // $font-size, $line-height
 
+  font-weight: 400;
   margin: 0;
+
+  @media (min-width: $tablet-width) {
+    @include primary-font (16px, 24px); // $font-size, $line-height
+  }
 }
