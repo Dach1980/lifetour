@@ -64,7 +64,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 62px;
+    padding-top: 64px;
   }
 }
 
@@ -139,7 +139,7 @@
     line-height: 21px;
 
     &:first-of-type {
-      margin-bottom: -35px;
+      margin-bottom: -40px;
       font-size: 35px;
       line-height: 35px;
     }
@@ -155,7 +155,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 54px;
+    padding-top: 58px;
     margin-bottom: 56px;
   }
 }
@@ -178,7 +178,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    top: -5px;
+    top: 0px;
     right: 0;
 
     &--prev {
@@ -221,7 +221,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    grid-template-columns: repeat(4, 254px);
+    grid-template-columns: repeat(4, 259px);
     gap: 0;
     font-size: 16px;
     line-height: 24px;
@@ -267,6 +267,7 @@
   }
 
   &:nth-child(3)::before {
+    margin-left: 20px;
     background-image: url("/__spritemap#sprite-wood-view");
   }
 
@@ -343,14 +344,17 @@
     }
 
     &:nth-child(2) {
+      left: -5px;
       order: unset;
     }
 
     &:nth-child(3) {
+      left: -30px;
       order: unset;
     }
 
     &:nth-child(4) {
+      left: -16px;
       order: unset;
     }
 
