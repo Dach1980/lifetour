@@ -168,7 +168,7 @@
     position: absolute;
     align-items: center;
     justify-content: center;
-    top: 29px;
+    top: 6px;
     right: 0;
 
     &--prev {
@@ -267,7 +267,6 @@
   }
 
   &:nth-child(3)::before {
-    margin-left: 20px;
     background-image: url("/__spritemap#sprite-wood-view");
   }
 
@@ -349,6 +348,7 @@
     }
 
     &:nth-child(3) {
+      margin-left: 20px;
       left: -30px;
       order: unset;
     }

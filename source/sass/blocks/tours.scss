@@ -102,8 +102,8 @@
   margin-bottom: 25px;
 
   @media (min-width: $tablet-width) {
-    padding-top: 70px;
-    margin-bottom: 27px;
+    padding-top: 72px;
+    margin-bottom: 26px;
   }
 
   @media (min-width: $desktop-width) {
@@ -120,7 +120,7 @@
     align-items: center;
     justify-content: center;
     position: absolute;
-    top: 32px;
+    top: 12px;
     right: 0;
 
     &--prev {
@@ -178,8 +178,10 @@
   }
 
   @media (min-width: $tablet-width) {
-    font-size: 16px;
-    line-height: 16px;
+    @include primary-font (16px, 1); // $font-size, $line-height
+
+    margin-left: 221px;
+    letter-spacing: 0.6px;
   }
 
   @media (min-width: $desktop-width) {
