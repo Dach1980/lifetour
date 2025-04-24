@@ -12,10 +12,12 @@
 
   @media (min-width: $tablet-width) {
     width: 330px;
+    // height: 417px;
   }
 
   @media (min-width: $desktop-width) {
     width: 380px;
+    // height: 416px;
   }
 }
 
@@ -37,6 +39,14 @@
   display: flex;
   align-items: center;
   gap: 14px;
+
+  @media (min-width: $tablet-width) {
+    gap: 13px;
+  }
+
+  @media (min-width: $desktop-width) {
+    gap: 14px;
+  }
 }
 
 .tour-slide__description {

@@ -23,6 +23,10 @@
   display: flex;
   gap: 20px;
 
+  @media (min-width: $tablet-width) {
+    transform: translate(49%, 0);
+  }
+
   @media (min-width: $desktop-width) {
     right: 0;
     bottom: 92px;
