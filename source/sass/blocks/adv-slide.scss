@@ -65,7 +65,7 @@
 
   @media (min-width: $tablet-width) {
     width: 324px;
-    height: 340px;
+    height: 339px;
     padding: 29px 19px;
     font-size: 14px;
     line-height: 22px;
@@ -74,7 +74,7 @@
       width: 52px;
       height: 52px;
       margin-bottom: 25px;
-      background-size: 49px 49px;
+      background-size: 47px 47px;
     }
 
     &--safe br {
@@ -150,6 +150,7 @@
   }
 
   @media (min-width: $desktop-width) {
+    margin-bottom: 14px;
     font-size: 18px;
     line-height: 18px;
   }
