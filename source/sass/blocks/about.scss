@@ -22,7 +22,7 @@
 
 .about__photo {
   width: 100vw;
-  margin-bottom: 48px;
+  margin-bottom: 16px;
   margin-left: calc(-1 * (((100vw - $mobile-width) / 2) + 15px));
   margin-right: -15px;
   overflow: hidden;
@@ -46,7 +46,7 @@
 .about__photo img {
   object-fit: cover;
   object-position: left;
-  min-width: 400px;
+  min-width: 320px;
 
   @media (min-width: $tablet-width) {
     min-height: 350px;
