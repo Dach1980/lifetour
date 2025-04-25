@@ -130,7 +130,7 @@
 
   @media (min-width: $tablet-width) {
     width: 360px;
-    gap: 11px;
+    gap: 12px;
   }
 
   @media (min-width: $desktop-width) {
@@ -161,6 +161,10 @@
 .form__submit {
   padding: 22px 20px 20px;
   width: 100%;
+
+  @media (min-width: $tablet-width) {
+    padding: 20px;
+  }
 
   @media (min-width: $desktop-width) {
     padding: 20px;

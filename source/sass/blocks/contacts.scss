@@ -3,6 +3,7 @@
   padding-bottom: 19px;
 
   @media (min-width: $tablet-width) {
+    padding-left: 44px;
     padding-top: 60px;
     padding-bottom: 39px;
   }
@@ -11,6 +12,7 @@
     display: grid;
     grid-template-columns: 500px 600px;
     gap: 0 100px;
+    padding-left: 120px;
     padding-top: 123px;
     padding-bottom: 55px;
   }
