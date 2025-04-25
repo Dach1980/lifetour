@@ -26,11 +26,13 @@
     gap: 0;
     align-items: center;
     padding-left: 44px;
+    padding-right: 46px;
   }
 
   @media (min-width: $desktop-width) {
     grid-template-columns: 205px 1fr 190px;
     padding-left: 120px;
+    padding-right: 120px;
   }
 }
 

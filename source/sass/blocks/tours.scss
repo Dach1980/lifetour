@@ -146,7 +146,10 @@
 .tours__link {
   @include primary-font (14px, 1); // $font-size, $line-height
   font-weight: 700;
-  display: block;
+  display: flex;
+  gap: 4px;
+  justify-content: center;
+  align-items: center;
   width: fit-content;
   margin-left: auto;
   margin-right: auto;
@@ -157,7 +160,8 @@
   color: inherit;
 
   &:hover {
-    color: var(--border-accent, #ff6347);;
+    color: var(--border-accent, #ff6347);
+    ;
     outline: none;
   }
 
@@ -166,18 +170,21 @@
   }
 
   &:focus-visible {
-    color: var(--bg-primary, #ff6347);;
+    color: var(--bg-primary, #ff6347);
+    ;
     outline: none;
   }
 
   &:active {
-    color: var(--bg-secondary, #ff6347);;
+    color: var(--bg-secondary, #ff6347);
+    ;
     outline: none;
   }
 
   &:disabled,
   &--disabled {
-    color: var(--bg-middle, #ff6347);;
+    color: var(--bg-middle, #ff6347);
+    ;
     outline: none;
   }
 
@@ -192,4 +199,9 @@
     margin-left: 482px;
     letter-spacing: 0.6px;
   }
+}
+
+.tours__link svg {
+  width: 22px;
+  height: 13px;
 }
