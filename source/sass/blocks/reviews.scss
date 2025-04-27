@@ -41,9 +41,14 @@
 }
 
 .reviews__swiper {
+  box-shadow: 0 0 20px rgba(28, 51, 116, 0.1);
+  margin-bottom: -20px;
+
   @media (min-width: $tablet-width) {
     padding-top: 70px;
     overflow: visible;
+    box-shadow: none;
+    margin-bottom: 0;
   }
 
   @media (min-width: $desktop-width) {
