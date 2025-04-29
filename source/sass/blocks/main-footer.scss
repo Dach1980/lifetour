@@ -96,20 +96,20 @@
   &:hover {
     color: var(--bg-dark, #ff6347);
     outline: none;
+    text-decoration: underline;
   }
 
   &:focus {
-    outline: none;
+    outline: 1px solid var(--bg-dark, #ff6347);
   }
 
   &:focus-visible {
     color: var(--bg-dark, #ff6347);
     outline: 1px solid var(--bg-dark, #ff6347);
-    outline-offset: 3px 5px;
   }
 
   &:active {
-    color: var(--bg-secondary, #ff6347);
+    color: var(--bg-primary, #ff6347);
     outline: none;
   }
 
@@ -137,6 +137,7 @@
   }
 
   &:focus {
+    color: var(--bg-primary, #ff6347);
     outline: none;
   }
 
