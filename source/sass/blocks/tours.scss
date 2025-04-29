@@ -79,7 +79,7 @@
     padding-left: 44px;
     padding-right: 46px;
     padding-top: 61px;
-    padding-bottom: 40px;
+    padding-bottom: 41px;
   }
 
   @media (min-width: $desktop-width) {
@@ -192,13 +192,13 @@
   @media (min-width: $tablet-width) {
     @include primary-font (16px, 1); // $font-size, $line-height
 
-    margin-left: 222px;
-    letter-spacing: 0.6px;
+    margin-left: 221px;
+    gap: 6px;
   }
 
   @media (min-width: $desktop-width) {
     margin-left: 482px;
-    letter-spacing: 0.6px;
+    gap: 4px;
   }
 }
 
