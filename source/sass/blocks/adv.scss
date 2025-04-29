@@ -115,7 +115,7 @@
 .adv__swiper--non-slider .adv__swiper-wrapper {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 13px;
+  gap: 12.2px;
 
   @media (min-width: $tablet-width) {
     grid-template-columns: 1fr 1fr;
