@@ -16,6 +16,8 @@
 
   &:focus {
     outline: none;
+    background-color: transparent;
+    color: var(--bg-secondary, #ff6347);
   }
 
   &:focus-visible {
