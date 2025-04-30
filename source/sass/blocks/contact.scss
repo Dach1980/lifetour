@@ -65,6 +65,7 @@
 
 .contact__name {
   @include primary-font (14px, 1); // $font-size, $line-height
+
   font-weight: 600;
   margin-bottom: 8px;
 

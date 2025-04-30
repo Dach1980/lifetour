@@ -126,6 +126,7 @@
 
 .main-footer__phone {
   @include primary-font (18px, 1); // $font-size, $line-height
+
   font-weight: 600;
   display: none;
   text-decoration: none;
@@ -175,6 +176,7 @@
 
 .main-footer__privacy {
   @include primary-font (12px, 1); // $font-size, $line-height
+
   font-weight: 300;
   text-decoration: none;
   color: inherit;

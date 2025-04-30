@@ -5,7 +5,7 @@
   padding: 20px;
   font-size: 12px;
   line-height: 18px;
-  background-color: var(--bg-ligth, #ff6347);;
+  background-color: var(--bg-ligth, #ff6347);
   box-shadow: 0 0 20px rgba(28, 51, 116, 0.1);
 
   @media (min-width: $tablet-width) {
@@ -53,6 +53,7 @@
 
 .review-slide__author {
   @include primary-font (12px, 1); // $font-size, $line-height
+
   font-weight: 700;
   margin: 0;
   margin-bottom: 8px;
@@ -67,6 +68,7 @@
 
 .review-slide__about-author {
   @include primary-font (12px, 1); // $font-size, $line-height
+
   font-weight: 300;
   margin: 0;
 }

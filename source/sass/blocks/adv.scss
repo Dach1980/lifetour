@@ -20,7 +20,7 @@
         background-image: url("../../img/decoration/clouds-3-m.webp");
       }
 
-      @media (resolution >=2dppx) {
+      @media (resolution >= 2dppx) {
         background-image: url("../../img/decoration/clouds-3-2x-m.png");
 
         @supports (background-image: url("../../img/decoration/clouds-3-2x-m.webp")) {
@@ -42,7 +42,7 @@
         background-image: url("../../img/decoration/clouds-3-l.webp");
       }
 
-      @media (resolution >=2dppx) {
+      @media (resolution >= 2dppx) {
         background-image: url("../../img/decoration/clouds-3-2x-l.png");
 
         @supports (background-image: url("../../img/decoration/clouds-3-2x-l.webp")) {
@@ -141,7 +141,6 @@
   }
 
   @media (min-width: $desktop-width) {
-
     &:last-child,
     &:nth-last-child(2) {
       display: flex;

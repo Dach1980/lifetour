@@ -1,5 +1,6 @@
 .promo-slide {
   @include primary-font (15px, 20px); // $font-size, $line-height
+
   font-weight: 400;
   position: relative;
   width: 100vw;
@@ -106,6 +107,7 @@
 
 .promo-slide h2 {
   @include primary-font (26px, 1); // $font-size, $line-height
+
   font-weight: 800;
   margin: 0;
   margin-bottom: 15px;
@@ -163,6 +165,7 @@
 
 .promo-slide__about-list {
   @include primary-font (12px, 16px); // $font-size, $line-height
+
   font-weight: 400;
   margin: 0;
   padding: 0;

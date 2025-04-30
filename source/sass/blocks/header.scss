@@ -66,6 +66,7 @@
 
 .header__phone {
   @include primary-font (14px, 1); // $font-size, $line-height
+
   font-weight: 600;
   grid-column: -2/-1;
   justify-self: end;

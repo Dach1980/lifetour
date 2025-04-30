@@ -20,7 +20,7 @@
         background-image: url("../../img/decoration/clouds-2-m.webp");
       }
 
-      @media (resolution >=2dppx) {
+      @media (resolution >= 2dppx) {
         background-image: url("../../img/decoration/clouds-2-2x-m.png");
 
         @supports (background-image: url("../../img/decoration/clouds-2-2x-m.webp")) {
@@ -44,7 +44,7 @@
         background-image: url("../../img/decoration/clouds-2-l.webp");
       }
 
-      @media (resolution >=2dppx) {
+      @media (resolution >= 2dppx) {
         background-image: url("../../img/decoration/clouds-2-2x-l.png");
 
         @supports (background-image: url("../../img/decoration/clouds-2-2x-l.webp")) {
@@ -108,13 +108,15 @@
 
 .training__subtitle {
   @include primary-font (16px, 1); // $font-size, $line-height
+
   font-weight: 700;
   margin: 0;
   margin-bottom: 24px;
 
   &:first-of-type {
     @include primary-font (22px, 1); // $font-size, $line-height
-  font-weight: 800;
+
+    font-weight: 800;
     margin-bottom: 25px;
   }
 
@@ -189,6 +191,7 @@
 
 .training__process-list {
   @include primary-font (12px, 18px); // $font-size, $line-height
+
   position: relative;
   display: grid;
   gap: 25px;
@@ -205,7 +208,7 @@
     display: block;
     width: 2px;
     height: calc(100% - 21px);
-    background-color: var(--bg-primary, #ff6347);;
+    background-color: var(--bg-primary, #ff6347);
   }
 
   @media (min-width: $tablet-width) {
@@ -285,7 +288,7 @@
     display: block;
     width: 14px;
     height: 14px;
-    background-color: var(--bg-primary, #ff6347);;
+    background-color: var(--bg-primary, #ff6347);
     border-radius: 7px;
   }
 

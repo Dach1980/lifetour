@@ -55,6 +55,7 @@
   &--routes br:nth-of-type(1) {
     display: none;
   }
+
   &--routes br:nth-of-type(2) {
     display: inline;
   }
@@ -102,6 +103,7 @@
     &--routes br:nth-of-type(1) {
       display: inline;
     }
+
     &--routes br:nth-of-type(2) {
       display: none;
     }
@@ -139,6 +141,7 @@
 
 .adv-slide h3 {
   @include primary-font (14px, 1); // $font-size, $line-height
+
   font-weight: 600;
   margin: 0;
   margin-bottom: 15px;

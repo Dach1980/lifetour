@@ -1,72 +1,91 @@
 .tours {
   position: relative;
+}
 
-  &::before {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    right: 0;
-    top: 10px;
-    display: block;
-    width: 141px;
-    height: 595px;
+.tours::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  right: 0;
+  top: 10px;
+  display: block;
+  width: 141px;
+  height: 595px;
+  background-image: url("../../img/decoration/clouds-1-s.png");
+  background-size: 141px 595px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
 
-    background-image: url("../../img/decoration/clouds-1-s.png");
-    background-size: 141px 595px;
-    background-repeat: no-repeat;
-    background-position: center;
+@supports (background-image: url("../../img/decoration/clouds-1-s.webp")) {
+  .tours::before {
+    background-image: url("../../img/decoration/clouds-1-s.webp");
+  }
+}
 
-    @supports (background-image: url("../../img/decoration/clouds-1-s.webp")) {
-      background-image: url("../../img/decoration/clouds-1-s.webp");
+@media (resolution >= 2dppx) {
+  .tours::before {
+    background-image: url("../../img/decoration/clouds-1-2x-s.png");
+  }
+
+  @supports (background-image: url("../../img/decoration/clouds-1-2x-s.webp")) {
+    .tours::before {
+      background-image: url("../../img/decoration/clouds-1-2x-s.webp");
     }
+  }
+}
 
-    @media (resolution >=2dppx) {
-      background-image: url("../../img/decoration/clouds-1-2x-s.png");
+@media (min-width: $tablet-width) {
+  .tours::before {
+    top: -91px;
+    width: 425px;
+    height: 1630px;
+    background-image: url("../../img/decoration/clouds-1-m.png");
+    background-size: 425px 1630px;
+  }
 
-      @supports (background-image: url("../../img/decoration/clouds-1-2x-s.webp")) {
-        background-image: url("../../img/decoration/clouds-1-2x-s.webp");
-      }
+  @supports (background-image: url("../../img/decoration/clouds-1-m.webp")) {
+    .tours::before {
+      background-image: url("../../img/decoration/clouds-1-m.webp");
     }
+  }
+}
 
-    @media (min-width: $tablet-width) {
-      top: -91px;
-      width: 425px;
-      height: 1630px;
+@media (min-width: $tablet-width) and (resolution >= 2dppx) {
+  .tours::before {
+    background-image: url("../../img/decoration/clouds-1-2x-m.png");
+  }
 
-      background-image: url("../../img/decoration/clouds-1-m.png");
-      background-size: 425px 1630px;
-
-      @supports (background-image: url("../../img/decoration/clouds-1-m.webp")) {
-        background-image: url("../../img/decoration/clouds-1-m.webp");
-      }
-
-      @media (resolution >=2dppx) {
-        background-image: url("../../img/decoration/clouds-1-2x-m.png");
-
-        @supports (background-image: url("../../img/decoration/clouds-1-2x-m.webp")) {
-          background-image: url("../../img/decoration/clouds-1-2x-m.webp");
-        }
-      }
+  @supports (background-image: url("../../img/decoration/clouds-1-2x-m.webp")) {
+    .tours::before {
+      background-image: url("../../img/decoration/clouds-1-2x-m.webp");
     }
+  }
+}
 
-    @media (min-width: $desktop-width) {
-      top: -126px;
-      width: 602px;
+@media (min-width: $desktop-width) {
+  .tours::before {
+    top: -126px;
+    width: 602px;
+    background-image: url("../../img/decoration/clouds-1-l.png");
+    background-size: 602px 1630px;
+  }
 
-      background-image: url("../../img/decoration/clouds-1-l.png");
-      background-size: 602px 1630px;
+  @supports (background-image: url("../../img/decoration/clouds-1-l.webp")) {
+    .tours::before {
+      background-image: url("../../img/decoration/clouds-1-l.webp");
+    }
+  }
+}
 
-      @supports (background-image: url("../../img/decoration/clouds-1-l.webp")) {
-        background-image: url("../../img/decoration/clouds-1-l.webp");
-      }
+@media (min-width: $desktop-width) and (resolution >= 2dppx) {
+  .tours::before {
+    background-image: url("../../img/decoration/clouds-1-2x-l.png");
+  }
 
-      @media (resolution >=2dppx) {
-        background-image: url("../../img/decoration/clouds-1-2x-l.png");
-
-        @supports (background-image: url("../../img/decoration/clouds-1-2x-l.webp")) {
-          background-image: url("../../img/decoration/clouds-1-2x-l.webp");
-        }
-      }
+  @supports (background-image: url("../../img/decoration/clouds-1-2x-l.webp")) {
+    .tours::before {
+      background-image: url("../../img/decoration/clouds-1-2x-l.webp");
     }
   }
 }
@@ -156,7 +175,6 @@
   margin-right: auto;
   padding: 10px;
   text-transform: uppercase;
-  // letter-spacing: 1px;
   text-decoration: none;
   color: inherit;
 

@@ -1,5 +1,6 @@
 .main-nav {
   @include primary-font (14px, 1); // $font-size, $line-height
+
   font-weight: 700;
   position: static;
   display: none;
@@ -95,7 +96,7 @@
 
   &:focus-visible {
     color: var(--bg-ligth, #ff6347);
-    outline: 1px solid var(--bg-ligth, #ff6347);;
+    outline: 1px solid var(--bg-ligth, #ff6347);
     outline-offset: 3px 5px;
   }
 
