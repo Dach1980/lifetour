@@ -164,6 +164,7 @@
 
 .tours__link {
   @include primary-font (14px, 1); // $font-size, $line-height
+
   font-weight: 700;
   letter-spacing: 0.6px;
   display: flex;
@@ -201,7 +202,7 @@
   &:disabled,
   &--disabled {
     color: var(--bg-middle, #ff6347);
-    ;
+    
     outline: none;
   }
 
