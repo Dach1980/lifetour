@@ -14,7 +14,7 @@
   border-radius: 2px;
 
   &:hover {
-    border-color: var(--bg-primary, #ff6347);
+    border: 1px solid var(--bg-primary, #ff6347);
   }
 
   &::placeholder {
@@ -23,11 +23,10 @@
   }
 
   &--invalid {
-    border-color: var(--error, #ff6347);
+    border: 1px solid var(--error, #ff6347);
   }
 
   @media (min-width: $tablet-width) {
-    border: none;
     padding: 20px 30px;
   }
 
@@ -37,7 +36,7 @@
 }
 
 .form-field__inp:focus {
-  outline: none;
+  border: 1px solid var(--bg-dark, #ff6347);
 
   &::placeholder {
     color: var(--bg-primary, #ff6347);
@@ -46,7 +45,7 @@
 }
 
 .form-field__inp:focus-visible {
-  border-color: var(--bg-dark, #ff6347);
+  border: 1px solid var(--bg-dark, #ff6347);
 
   &::placeholder {
     color: var(--bg-primary, #ff6347);
@@ -55,7 +54,7 @@
 }
 
 .form-field__inp:disabled {
-  border-color: var(--bg-middle, #ff6347);
+  outline: 1px solid var(--bg-middle, #ff6347);
 
   &::placeholder {
     color: var(--bg-middle, #ff6347);

@@ -79,6 +79,7 @@
   }
 
   &:focus {
+    color: var(--text-primary, #ff6347);
     outline: none;
   }
 
