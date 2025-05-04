@@ -1,5 +1,6 @@
 import Swiper from 'swiper';
 import { Navigation } from 'swiper/modules';
+import { MOBILE_WIDTH, TABLET_WIDTH, DESKTOP_WIDTH } from './constants';
 
 function reviewsSlider() {
   return new Swiper('.reviews__swiper', {
@@ -11,15 +12,15 @@ function reviewsSlider() {
       disabledClass: 'primary-slider-button--disabled',
     },
     breakpoints: {
-      320: {
+      [MOBILE_WIDTH]: {
         slidesPerView: 1,
         allowTouchMove: true,
       },
-      768: {
+      [TABLET_WIDTH]: {
         slidesPerView: 1.19,
         spaceBetween: 30,
       },
-      1440: {
+      [DESKTOP_WIDTH]: {
         slidesPerView: 1.61,
         spaceBetween: 120,
         allowTouchMove: false,

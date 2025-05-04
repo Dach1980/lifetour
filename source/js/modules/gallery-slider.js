@@ -1,5 +1,6 @@
 import Swiper from 'swiper';
 import { Navigation } from 'swiper/modules';
+import { MOBILE_WIDTH, TABLET_WIDTH, DESKTOP_WIDTH } from './constants';
 
 function gallerySlider() {
   return new Swiper('.gallery__swiper', {
@@ -11,17 +12,17 @@ function gallerySlider() {
       prevEl: '.gallery__button--prev',
     },
     breakpoints: {
-      320: {
+      [MOBILE_WIDTH]: {
         slidesPerView: 2,
         spaceBetween: 5,
         allowTouchMove: true,
       },
-      768: {
+      [TABLET_WIDTH]: {
         slidesPerView: 3,
         spaceBetween: 5,
         allowTouchMove: true,
       },
-      1440: {
+      [DESKTOP_WIDTH]: {
         slidesPerView: 5,
         spaceBetween: 5,
         allowTouchMove: false,

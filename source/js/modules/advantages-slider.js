@@ -1,5 +1,6 @@
 import Swiper from 'swiper';
 import { Navigation } from 'swiper/modules';
+import { MOBILE_WIDTH, TABLET_WIDTH, DESKTOP_WIDTH } from './constants';
 
 function advsSlider() {
   return new Swiper('.adv__swiper', {
@@ -12,15 +13,15 @@ function advsSlider() {
       disabledClass: 'primary-slider-button--disabled',
     },
     breakpoints: {
-      320: {
+      [MOBILE_WIDTH]: {
         enabled: false,
         slidesPerView: null,
       },
-      768: {
+      [TABLET_WIDTH]: {
         enabled: false,
         slidesPerView: null,
       },
-      1440: {
+      [DESKTOP_WIDTH]: {
         slidesPerView: 3,
         spaceBetween: 30,
         centeredSlides: false,
@@ -33,7 +34,7 @@ function advsSlider() {
     },
     on: {
       init: function enableOnlyMobile(swiper) {
-        if (1440 > window.innerWidth) {
+        if (DESKTOP_WIDTH > window.innerWidth) {
           swiper.disable();
           swiper.el.classList.add('adv__swiper--non-slider');
         } else {

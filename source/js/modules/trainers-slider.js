@@ -1,5 +1,6 @@
 import Swiper from 'swiper';
 import { Navigation } from 'swiper/modules';
+import { MOBILE_WIDTH, TABLET_WIDTH, DESKTOP_WIDTH } from './constants';
 
 function trainersSlider() {
   return new Swiper('.training__swiper', {
@@ -11,17 +12,17 @@ function trainersSlider() {
       disabledClass: 'primary-slider-button--disabled',
     },
     breakpoints: {
-      320: {
+      [MOBILE_WIDTH]: {
         slidesPerView: 1,
         allowTouchMove: true,
         initialSlide: 2,
       },
-      768: {
+      [TABLET_WIDTH]: {
         slidesPerView: 3,
         spaceBetween: 20,
         initialSlide: 0,
       },
-      1440: {
+      [DESKTOP_WIDTH]: {
         slidesPerView: 4,
         spaceBetween: 20,
         allowTouchMove: false,
