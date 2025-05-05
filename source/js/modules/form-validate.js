@@ -1,60 +1,51 @@
-const formEl = document.querySelector('.form__fields');
-const errorEl = document.querySelector('.form__error');
-const inpPhone = formEl.querySelector('#client-phone');
-const inpEmail = formEl.querySelector('#client-email');
-const labelPhone = formEl.querySelector('.form-field__name--phone');
-const labelEmail = formEl.querySelector('.form-field__name--email');
+const formElement = document.querySelector('.form__fields');
+const errorMessageElement = document.querySelector('.form__error');
+const phoneInput = formElement.querySelector('#client-phone');
+const emailInput = formElement.querySelector('#client-email');
+const phoneLabel = formElement.querySelector('.form-field__name--phone');
+const emailLabel = formElement.querySelector('.form-field__name--email');
 
-const resetError = () => {
-  if (errorEl.classList.contains('form__error--is-error')) {
-    errorEl.classList.remove('form__error--is-error');
-    errorEl.textContent = '';
-    inpPhone.classList.remove('form-field__inp--invalid');
-    inpEmail.classList.remove('form-field__inp--invalid');
+const clearErrorMessages = () => {
+  if (errorMessageElement.classList.contains('form__error--is-error')) {
+    errorMessageElement.classList.remove('form__error--is-error');
+    errorMessageElement.textContent = '';
+    phoneInput.classList.remove('form-field__inp--invalid');
+    emailInput.classList.remove('form-field__inp--invalid');
   }
 };
 
-formEl.addEventListener('submit', (evt) => {
+formElement.addEventListener('submit', (evt) => {
   evt.preventDefault();
   const phonePattern = /^[0-9]*$/i;
   const emailPattern = /.+@.+\..+/i;
   let phoneErrorText = '';
   let emailErrorText = '';
 
-  if (!phonePattern.test(inpPhone.value)) {
-    inpPhone.classList.add('form-field__inp--invalid');
-    phoneErrorText = 'Номер телефона должен содержать только цифры от 0 до 9.';
+  if (!phonePattern.test(phoneInput.value)) {
+    phoneInput.classList.add('form-field__inp--invalid');
+    phoneErrorText = 'Номер телефона должен содержать цифры от 0 до 9.';
   }
 
-  if (!emailPattern.test(inpEmail.value)) {
-    inpEmail.classList.add('form-field__inp--invalid');
-    emailErrorText = 'E-mail должен содержать знак @ и домен через знак точки.';
+  if (!emailPattern.test(emailInput.value)) {
+    emailInput.classList.add('form-field__inp--invalid');
+    emailErrorText = 'В e-mail должен быть символ @ и домен через точку';
   }
 
-  if ((!phonePattern.test(inpPhone.value)) || (!emailPattern.test(inpEmail.value))) {
-    errorEl.textContent = `${phoneErrorText} ${emailErrorText}`;
-    errorEl.classList.add('form__error--is-error');
+  if ((!phonePattern.test(phoneInput.value)) || (!emailPattern.test(emailInput.value))) {
+    errorMessageElement.textContent = `${phoneErrorText} ${emailErrorText}`;
+    errorMessageElement.classList.add('form__error--is-error');
     return;
   }
 
-  formEl.submit();
+  formElement.submit();
 });
 
-const hideLabel = () => {
-  if (inpPhone.value !== '') {
-    labelPhone.style.display = 'none';
-  } else {
-    labelPhone.style.display = 'block';
-  }
-
-  if (inpEmail.value !== '') {
-    labelEmail.style.display = 'none';
-  } else {
-    labelEmail.style.display = 'block';
-  }
+const toggleLabelsVisibility = () => {
+  phoneLabel.style.display = phoneInput.value !== '' ? 'none' : 'block';
+  emailLabel.style.display = emailInput.value !== '' ? 'none' : 'block';
 };
 
-formEl.addEventListener('input', resetError);
-inpPhone.addEventListener('focus', resetError);
-inpEmail.addEventListener('focus', resetError);
-formEl.addEventListener('input', hideLabel);
+formElement.addEventListener('input', clearErrorMessages);
+phoneInput.addEventListener('focus', clearErrorMessages);
+emailInput.addEventListener('focus', clearErrorMessages);
+formElement.addEventListener('input', toggleLabelsVisibility);

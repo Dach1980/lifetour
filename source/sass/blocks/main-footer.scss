@@ -187,6 +187,7 @@
   }
 
   &:focus {
+    color: var(--bg-primary, #ff6347);  
     outline: none;
   }
 

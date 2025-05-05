@@ -63,6 +63,9 @@
   }
 
   &:focus {
+    background-color: var(--bg-ligth, #ff6347);
+    color: var(--bg-dark, #ff6347);
+    border-color: var(--bg-ligth, #ff6347);
     outline: none;
   }
 
